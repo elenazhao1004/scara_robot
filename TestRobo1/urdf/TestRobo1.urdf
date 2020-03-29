@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="TestRobo1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.028666 -0.00015364 0.14106"
+        rpy="0 0 0" />
+      <mass
+        value="2.565" />
+      <inertia
+        ixx="0.005891"
+        ixy="5.4055E-11"
+        ixz="6.4323E-05"
+        iyy="0.0053816"
+        iyz="-3.5928E-12"
+        izz="0.0061554" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TestRobo1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TestRobo1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link1">
+    <inertial>
+      <origin
+        xyz="0.049343 0.10645 0.038471"
+        rpy="0 0 0" />
+      <mass
+        value="0.56851" />
+      <inertia
+        ixx="0.0019108"
+        ixy="-0.0007026"
+        ixz="5.1977E-05"
+        iyy="0.00072073"
+        iyz="0.00011213"
+        izz="0.0021082" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TestRobo1/meshes/Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TestRobo1/meshes/Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint1"
+    type="revolute">
+    <origin
+      xyz="0.10571 -0.0001601 0.22388"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2"
+      upper="2"
+      effort="0"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link2">
+    <inertial>
+      <origin
+        xyz="0.082985 -0.0014773 0.035771"
+        rpy="0 0 0" />
+      <mass
+        value="0.21287" />
+      <inertia
+        ixx="6.4777E-05"
+        ixy="-4.962E-07"
+        ixz="8.5116E-06"
+        iyy="0.00039132"
+        iyz="3.4308E-07"
+        izz="0.00042599" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TestRobo1/meshes/Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TestRobo1/meshes/Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint2"
+    type="revolute">
+    <origin
+      xyz="0.079905 0.17238 0.005"
+      rpy="0 0 0" />
+    <parent
+      link="Link1" />
+    <child
+      link="Link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2"
+      upper="2"
+      effort="0"
+      velocity="1" />
+  </joint>
+  <link
+    name="Tool">
+    <inertial>
+      <origin
+        xyz="0.015 0.036479 0.046764"
+        rpy="0 0 0" />
+      <mass
+        value="0.020059" />
+      <inertia
+        ixx="4.5223E-05"
+        ixy="3.8116E-21"
+        ixz="8.0397E-21"
+        iyy="3.9642E-05"
+        iyz="-3.1927E-06"
+        izz="6.7896E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TestRobo1/meshes/Tool.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TestRobo1/meshes/Tool.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Tool1"
+    type="fixed">
+    <origin
+      xyz="0.10693 0.034498 -0.03057"
+      rpy="3.1416 0 -0.051906" />
+    <parent
+      link="Link2" />
+    <child
+      link="Tool" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
