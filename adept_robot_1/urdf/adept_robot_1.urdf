@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="adept_robot_1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.028666 -0.00015364 0.14106"
+        rpy="0 0 0" />
+      <mass
+        value="2.565" />
+      <inertia
+        ixx="0.005891"
+        ixy="5.4055E-11"
+        ixz="6.4323E-05"
+        iyy="0.0053816"
+        iyz="-3.5928E-12"
+        izz="0.0061554" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adept_robot_1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adept_robot_1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link1">
+    <inertial>
+      <origin
+        xyz="0.100675386532307 0.0602522370997171 0.0384712439856732"
+        rpy="0 0 0" />
+      <mass
+        value="0.56850728923011" />
+      <inertia
+        ixx="0.000880665593009749"
+        ixy="-0.000811418376312422"
+        ixz="0.000106050401275572"
+        iyy="0.00175084560162715"
+        iyz="6.34690780213349E-05"
+        izz="0.00210823760335471" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adept_robot_1/meshes/Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adept_robot_1/meshes/Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint1"
+    type="revolute">
+    <origin
+      xyz="0.10571 -0.0001601 0.22388"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2"
+      upper="2"
+      effort="0"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link2">
+    <inertial>
+      <origin
+        xyz="0.0605382385616534 0.0567786574084361 0.00977088530814851"
+        rpy="0 0 0" />
+      <mass
+        value="0.212874058600781" />
+      <inertia
+        ixx="0.000223898669015198"
+        ixy="-0.000163221407324826"
+        ixz="5.86458508448241E-06"
+        iyy="0.000232202235405213"
+        iyz="6.17838218976215E-06"
+        izz="0.000425987377018601" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adept_robot_1/meshes/Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adept_robot_1/meshes/Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint2"
+    type="revolute">
+    <origin
+      xyz="0.16303 0.097572 0.031"
+      rpy="0 0 0" />
+    <parent
+      link="Link1" />
+    <child
+      link="Link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2"
+      upper="2"
+      effort="0"
+      velocity="1" />
+  </joint>
+  <link
+    name="Tool">
+    <inertial>
+      <origin
+        xyz="-4.30677511026323E-06 -0.00299989925362837 0.0348778462843256"
+        rpy="0 0 0" />
+      <mass
+        value="0.023545411123381" />
+      <inertia
+        ixx="4.56549112028816E-05"
+        ixy="-7.94182515088701E-09"
+        ixz="-4.54390491574587E-09"
+        iyy="4.00718269980049E-05"
+        iyz="-3.17468051897677E-06"
+        izz="6.99639144528096E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adept_robot_1/meshes/Tool.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adept_robot_1/meshes/Tool.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Tool1"
+    type="prismatic">
+    <origin
+      xyz="0.090275 0.079059 -0.053023"
+      rpy="3.1416 0 0.71926" />
+    <parent
+      link="Link2" />
+    <child
+      link="Tool" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.06"
+      effort="0"
+      velocity="0.075" />
+  </joint>
+  <link
+    name="Link_4">
+    <inertial>
+      <origin
+        xyz="0.00058939814122394 0.00430885017149519 0.0431953969126737"
+        rpy="0 0 0" />
+      <mass
+        value="0.0317141760755607" />
+      <inertia
+        ixx="8.27991249324116E-06"
+        ixy="5.65096116311762E-07"
+        ixz="2.86955897465492E-07"
+        iyy="1.09886715451552E-05"
+        iyz="-1.0251065809926E-07"
+        izz="4.04352789918834E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adept_robot_1/meshes/Link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adept_robot_1/meshes/Link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Revolute4"
+    type="revolute">
+    <origin
+      xyz="0.00013701 0 0.125"
+      rpy="0 0 0.71926" />
+    <parent
+      link="Tool" />
+    <child
+      link="Link_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="0"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="RigidBody">
+    <inertial>
+      <origin
+        xyz="-3.88578058618805E-16 -2.60902410786912E-15 0.0207644820809651"
+        rpy="0 0 0" />
+      <mass
+        value="0.0158708742949296" />
+      <inertia
+        ixx="3.06313086445426E-05"
+        ixy="-3.3881317890172E-21"
+        ixz="4.33468061827087E-21"
+        iyy="3.06883773759365E-05"
+        iyz="2.81637706833088E-20"
+        izz="3.26387814501793E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adept_robot_1/meshes/RigidBody.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adept_robot_1/meshes/RigidBody.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Fixed_Body"
+    type="fixed">
+    <origin
+      xyz="0.090275 0.079059 -0.053023"
+      rpy="3.1416 0 0.71926" />
+    <parent
+      link="Link2" />
+    <child
+      link="RigidBody" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      soft_upper="0"
+      soft_lower="0"
+      k_position="0"
+      k_velocity="0" />
+  </joint>
+</robot>
